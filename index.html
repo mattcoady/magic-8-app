@@ -4,10 +4,29 @@
   <meta charset="UTF-8">
   <title>Title</title>
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
+  <div class="message"></div>
   <button>Hello</button>
+
+  <script type="text/javascript">
+
+    var messages = [
+      "Hows it going?",
+      "Can't wait for Game of Thrones"
+    ];
+
+    document.querySelector('button').addEventListener('click', function(){
+
+      var roll = Math.floor(Math.random() * messages.length);
+      document.querySelector('.message').innerText = messages[roll];
+
+    });
+
+  </script>
+
 
 </body>
 </html>
